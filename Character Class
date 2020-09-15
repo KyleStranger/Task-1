@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KyleStranger.GADE6111.Task1
+{
+    abstract class Character : Tile
+    {
+        protected int HP;
+        public int hp
+        {
+            get { return HP; }
+            set { HP = value; }
+        }
+
+        protected int maxHP;
+        public int maxhp
+        {
+            get { return maxHP; }
+            set { maxHP = value; }
+        }
+
+        protected int Damage;
+        public int damage
+        {
+            get { return Damage; }
+            set { Damage = value; }
+        }
+
+        protected Tile[] Visiom;
+        public Tile[] vision 
+        {
+            get { return Visiom; }
+            set { Visiom = value; }
+        }
+
+        protected bool isDead;
+ 
+
+
+        public Character(int tempHP, int tempmaxHP , int tempDamage , Tile[] tempVision , int tempx , int tempy) : base(tempx , tempy)
+        {
+            hp = tempHP;
+            maxHP = tempmaxHP;
+            damage = tempDamage;
+            vision = tempVision;
+        }
+
+        abstract public override string ToString();
+    }
+}
