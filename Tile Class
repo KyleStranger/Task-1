@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KyleStranger.GADE6111.Task1
+{
+    abstract class Tile
+    {
+        protected int X;
+        public int x
+        {
+            get { return X; }
+            set { X = value; }
+        } 
+        protected int Y;
+        public int y
+        {
+            get { return Y; }
+            set { Y = value; }
+        }
+
+        public Tile(int TempX , int TempY)
+        {
+            X = TempX;
+
+            Y = TempY;
+        }
+        public enum TileType
+        {
+            Hero, Enemy, Gold, Weapon
+        }
+    }
+}
